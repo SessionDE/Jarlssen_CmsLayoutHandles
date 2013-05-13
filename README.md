@@ -6,7 +6,7 @@ Add custom layout handles by CMS page type.
 Example (in layout XML file):
 =============================
 
-<CMS_TYPE_ARTIST>
+```<CMS_TYPE_ARTIST>
 
   <!-- Restructure the page like a boss -->
 	<reference name="root">
@@ -28,3 +28,4 @@ Example (in layout XML file):
     </reference>
     
 </CMS_TYPE_ARTIST>
+```
