@@ -1,13 +1,18 @@
 CmsLayoutHandles
 ================
 
-Add custom layout handles by CMS page type.
+Add custom layout handles by CMS page type.  
+
+Purpose
+=======
+
+This lets you define a 'page type' for each CMS page in the system.  Each page is then given a unique layout handle to allow custom layouts on a per-type basis in your design theme.
 
 Example (in layout XML file):
 =============================
 
-```<CMS_TYPE_ARTIST>
-
+```
+<CMS_TYPE_ARTIST>
   <!-- Restructure the page like a boss -->
 	<reference name="root">
             <action method="addBodyClass"><classname>cms-artist-page</classname></action>
@@ -26,6 +31,5 @@ Example (in layout XML file):
                 <params />
             </action>
     </reference>
-    
 </CMS_TYPE_ARTIST>
 ```
