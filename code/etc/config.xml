@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<config>
+
+    <modules>
+        <Jarlssen_CmsLayoutHandles>
+            <version>0.1.0</version>
+        </Jarlssen_CmsLayoutHandles>
+    </modules>
+
+    <global>
+
+        <models>
+            <cmslayouthandles>
+                <class>Jarlssen_CmsLayoutHandles_Model</class>
+            </cmslayouthandles>
+        </models>
+
+
+        <resources>
+            <cmslayouthandles_setup>
+                <setup>
+                    <module>Jarlssen_CmsLayoutHandles</module>
+                    <class>Mage_Catalog_Model_Resource_Eav_Mysql4_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </cmslayouthandles_setup>
+            <cmslayouthandles_write>
+                <connection>
+                    <use>core_write</use>
+                </connection>
+            </cmslayouthandles_write>
+            <cmslayouthandles_read>
+                <connection>
+                    <use>core_read</use>
+                </connection>
+            </cmslayouthandles_read>
+        </resources>
+
+        <helpers>
+            <cmslayouthandles>
+                <class>Jarlssen_CmsLayoutHandles_Helper</class>
+            </cmslayouthandles>
+        </helpers>
+
+    </global>
+
+    <frontend>
+        <routers>
+            <cms>
+                <args>
+                    <modules>
+                        <Jarlssen_CmsLayoutHandles before="Mage_Cms">Jarlssen_CmsLayoutHandles</Jarlssen_CmsLayoutHandles>
+                    </modules>
+                </args>
+            </cms>
+        </routers>
+        <events>
+            <cms_page_render>
+                <observers>
+                    <jarlssen_cmslayouthandles_cms_page_render>
+                        <type>singleton</type>
+                        <class>cmslayouthandles/observer</class>
+                        <method>onCmsRenderPage</method>
+                    </jarlssen_cmslayouthandles_cms_page_render>
+                </observers>
+            </cms_page_render>
+        </events>
+    </frontend>
+
+    <adminhtml>
+        <events>
+            <adminhtml_cms_page_edit_tab_main_prepare_form>
+                <observers>
+                    <jarlssen_cmslayouthandles_prepare_form>
+                        <type>singleton</type>
+                        <class>cmslayouthandles/observer</class>
+                        <method>prepareForm</method>
+                    </jarlssen_cmslayouthandles_prepare_form>
+                </observers>
+            </adminhtml_cms_page_edit_tab_main_prepare_form>
+        </events>
+    </adminhtml>
+
+</config>

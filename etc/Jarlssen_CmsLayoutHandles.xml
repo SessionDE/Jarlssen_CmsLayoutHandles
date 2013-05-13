@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Jarlssen_CmsLayoutHandles>
+            <active>true</active>
+            <codePool>community</codePool>
+        </Jarlssen_CmsLayoutHandles>
+    </modules>
+</config>

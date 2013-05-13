@@ -1,0 +1,5 @@
+# modman file - Jarlssen_CmsLayoutHandles
+# Get modman here:  https://github.com/colinmollenhour/modman
+
+etc/Jarlssen_CmsLayoutHandles.xml               app/etc/modules/Jarlssen_CmsLayoutHandles.xml
+code/*                                          app/code/community/Jarlssen/CmsLayoutHandles
